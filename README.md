@@ -1,9 +1,9 @@
-# TSP Problem Playground
+# TSP Playground
 
 ## Introduction
 
-This code provides a framework for implementing algorithms, which aim solve the travelling sales man problem.
-The Java version of this code is provided in the module TSM_Alg (MSc in Engineering degree course) from Mark Cieliebak.
+This code provides a framework for implementing algorithms, which aim to solve the travelling salesman problem.
+It is supposed to be used in the second part of the module TSM_Alg (MSc in Engineering degree course), teached by Mark Cieliebak.
 
 ## Contributors
 
