@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using TspLib.Extensions;
 using TspLib.FiloIO;
-using TspLib.Metaheuristics.Interfaces;
+using TspLib.Metaheuristics.Abstraction;
 
 namespace TspLib
 {

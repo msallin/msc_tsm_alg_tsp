@@ -6,7 +6,7 @@ namespace TspLib.Metaheuristics.BeamSearch
     {
         public static int BeamWith = 11;
 
-        public SolutionSet(PartialSolution[] ordered, int maxSolutionLength)
+        public SolutionSet(PartialSolution[] ordered)
         {
             PartialSolutionList = new PartialSolution[BeamWith];
             Set(ordered);

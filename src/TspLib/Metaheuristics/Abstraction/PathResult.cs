@@ -1,4 +1,4 @@
-﻿namespace TspLib.Metaheuristics
+﻿namespace TspLib.Metaheuristics.Abstraction
 {
     public class PathResult
     {
@@ -9,6 +9,7 @@
         }
 
         public double Distance { get; private set; }
+
         public Point LastPoint { get; }
 
         public Point FirstPoint { get; private set; }
@@ -19,10 +20,6 @@
             return this;
         }
 
-        internal void AddFirstPoint(Point point)
-        {
-            FirstPoint = point;
-            ;
-        }
+        internal void AddFirstPoint(Point point) => FirstPoint = point;
     }
 }

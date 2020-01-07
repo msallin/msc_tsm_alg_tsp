@@ -2,7 +2,7 @@
 using tests.Infrastructure;
 using TspLib;
 using TspLib.Metaheuristics;
-using TspLib.Metaheuristics.Interfaces;
+using TspLib.Metaheuristics.Abstraction;
 using Xunit;
 
 namespace tests
@@ -12,7 +12,7 @@ namespace tests
         [Fact]
         public void CalculateLength()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
 
             var first = new Point(2, 0, 2.5);
             var points = new List<Point>
@@ -31,7 +31,7 @@ namespace tests
         [Fact]
         public void CalculateLength_OnlyFew()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
 
             var first = new Point(2, 0, 2.5);
             var points = new List<Point>
@@ -47,7 +47,7 @@ namespace tests
         [Fact]
         public void CalculateLength_OnlyOne()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
 
             var first = new Point(2, 0, 2.5);
             var points = new List<Point>

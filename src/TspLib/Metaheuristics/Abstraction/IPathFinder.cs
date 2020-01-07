@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TspLib.Metaheuristics.Interfaces
+namespace TspLib.Metaheuristics.Abstraction
 {
     public interface IPathFinder
     {

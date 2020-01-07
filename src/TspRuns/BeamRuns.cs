@@ -1,4 +1,5 @@
 ﻿using TspLib;
+using TspLib.Metaheuristics;
 using TspLib.Metaheuristics.BeamSearch;
 using Xunit;
 
@@ -9,7 +10,7 @@ namespace TspRuns
         [Fact]
         public void BeamService()
         {
-            var service = new TspService(new BeamService());
+            var service = new TspService(new BeamSearchSolver());
             service.Run("pr2392");
         }
     }

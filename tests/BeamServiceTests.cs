@@ -1,4 +1,5 @@
 ﻿using TspLib;
+using TspLib.Metaheuristics;
 using TspLib.Metaheuristics.BeamSearch;
 using Xunit;
 
@@ -9,7 +10,7 @@ namespace tests
         [Fact]
         public void Sometest()
         {
-            var service = new BeamService();
+            var service = new BeamSearchSolver();
 
             var points = new Point[4];
 

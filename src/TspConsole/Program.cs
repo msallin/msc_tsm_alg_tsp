@@ -8,7 +8,7 @@ namespace TspConsole
     {
         public static void Main(string[] args)
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("berlin52");
 
             Console.ReadLine();

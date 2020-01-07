@@ -9,56 +9,56 @@ namespace TspRuns
         [Fact]
         public void GreedyInsertion_PilotTests()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("pilotTests");
         }
         
         [Fact]
         public void GreedyInsertion_Berlin52()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("berlin52");
         }
 
         [Fact]
         public void GreedyInsertion_Bier127()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("bier127");
         }
 
         [Fact]
         public void GreedyInsertion_Pr1002()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("pr1002");
         }
 
         [Fact]
         public void GreedyInsertion_Pr2392()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("pr2392");
         }
 
         [Fact]
         public void GreedyInsertion_Rl5915()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("rl5915");
         }
 
         [Fact]
         public void GreedyInsertion_Sw24978()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("sw24978");
         }
 
         [Fact]
         public void GreedyInsertion_Reseau_suisse()
         {
-            var service = new TspService(new GreedyInsertion());
+            var service = new TspService(new GreedyInsertionSolver());
             service.Run("reseau_suisse");
         }
     }

@@ -4,10 +4,6 @@ namespace TspLib.Metaheuristics.BeamSearch
 {
     public class PartialSolution
     {
-        private int i;
-        private PartialSolutionTail partialSolutionTail;
-        private PartialSolution partialSolutionToAttachTo;
-
         public PartialSolution(PartialSolution partialSolution, PartialSolutionTail partialSolutionTail, int id)
         {
             Id = id;
@@ -16,7 +12,6 @@ namespace TspLib.Metaheuristics.BeamSearch
             points.AddRange(partialSolutionTail.Points);
             Points = points.ToArray();
 
-            var length = Points.Length;
             DistanceClosed += partialSolutionTail.ClosedDistance;
             DistanceOpen = partialSolution.DistanceOpen + partialSolutionTail.DistanceOpen;
 

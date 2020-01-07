@@ -2,7 +2,7 @@
 using tests.Infrastructure;
 using TspLib;
 using TspLib.Metaheuristics;
-using TspLib.Metaheuristics.Interfaces;
+using TspLib.Metaheuristics.Abstraction;
 using Xunit;
 
 namespace tests
@@ -12,8 +12,8 @@ namespace tests
         [Fact]
         public void CalculateLength()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
-            Container.Register<ISolver, PilotMethod>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
+            Container.Register<ISolver, PilotMethodSolver>();
 
             var points = new List<Point>
             {
@@ -32,8 +32,8 @@ namespace tests
         [Fact]
         public void CalculateLength_New()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
-            Container.Register<ISolver, PilotMethod>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
+            Container.Register<ISolver, PilotMethodSolver>();
 
             var points = new List<Point>
             {
@@ -51,8 +51,8 @@ namespace tests
         [Fact]
         public void CalculateLength_OnlyFour()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
-            Container.Register<ISolver, PilotMethod>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
+            Container.Register<ISolver, PilotMethodSolver>();
 
             var points = new List<Point>
             {
@@ -69,8 +69,8 @@ namespace tests
         [Fact]
         public void CalculateLength_OnlyTwo()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
-            Container.Register<ISolver, PilotMethod>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
+            Container.Register<ISolver, PilotMethodSolver>();
 
             var points = new List<Point>
             {

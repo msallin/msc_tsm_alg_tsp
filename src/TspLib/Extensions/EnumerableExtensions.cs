@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HeuLib.Extensions
+namespace TspLib.Extensions
 {
     public static class EnumerableExtensions
     {

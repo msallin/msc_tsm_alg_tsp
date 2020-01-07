@@ -1,7 +1,7 @@
 ﻿using tests.Infrastructure;
 using TspLib;
 using TspLib.Metaheuristics;
-using TspLib.Metaheuristics.Interfaces;
+using TspLib.Metaheuristics.Abstraction;
 using Xunit;
 
 namespace TspRuns
@@ -10,8 +10,8 @@ namespace TspRuns
     {
         public PilotMethodRuns()
         {
-            Container.Register<IPathFinder, NearestNeighbour>();
-            Container.Register<ISolver, PilotMethod>();
+            Container.Register<IPathFinder, NearestNeighbourPathFinder>();
+            Container.Register<ISolver, PilotMethodSolver>();
         }
 
         [Fact]
