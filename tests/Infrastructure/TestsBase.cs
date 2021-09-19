@@ -2,11 +2,6 @@
 {
     public class TestsBase
     {
-        public TestsBase()
-        {
-            Container = new Container();
-        }
-
-        protected Container Container { get; }
+        protected Container Container { get; } = new();
     }
 }

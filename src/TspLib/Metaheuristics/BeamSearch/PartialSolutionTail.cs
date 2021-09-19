@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace TspLib.Metaheuristics.BeamSearch
 {
@@ -26,7 +27,7 @@ namespace TspLib.Metaheuristics.BeamSearch
         public PartialSolutionTail(PartialSolution partialSolution)
         {
             Head = partialSolution;
-            Points = new Point[0];
+            Points = Array.Empty<Point>();
         }
 
         public PartialSolution Head { get; }

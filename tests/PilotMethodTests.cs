@@ -17,12 +17,12 @@ namespace tests
 
             var points = new List<Point>
             {
-                new Point(3, 0, 0),
-                new Point(6, 1, 0),
-                new Point(4, 2, 0),
-                new Point(1, 2, 2),
-                new Point(5, 1, 2),
-                new Point(2, 0, 2)
+                new (3, 0, 0),
+                new (6, 1, 0),
+                new (4, 2, 0),
+                new (1, 2, 2),
+                new (5, 1, 2),
+                new (2, 0, 2)
             };
 
             var pilotMethod = Container.Resolve<ISolver>();
@@ -37,11 +37,11 @@ namespace tests
 
             var points = new List<Point>
             {
-                new Point(1, 0, 0),
-                new Point(2, 5, 5),
-                new Point(3, 0, 5),
-                new Point(4, 5, 0),
-                new Point(5, 1, 2.5)
+                new (1, 0, 0),
+                new (2, 5, 5),
+                new (3, 0, 5),
+                new (4, 5, 0),
+                new (5, 1, 2.5)
             };
 
             var pilotMethod = Container.Resolve<ISolver>();
@@ -56,10 +56,10 @@ namespace tests
 
             var points = new List<Point>
             {
-                new Point(4, 2, 0),
-                new Point(1, 2, 2),
-                new Point(5, 1, 2),
-                new Point(2, 1, 0)
+                new (4, 2, 0),
+                new (1, 2, 2),
+                new (5, 1, 2),
+                new (2, 1, 0)
             };
 
             var pilotMethod = Container.Resolve<ISolver>();
@@ -74,9 +74,9 @@ namespace tests
 
             var points = new List<Point>
             {
-                new Point(4, 2, 0),
-                new Point(1, 2, 2),
-                new Point(5, 1, 2)
+                new (4, 2, 0),
+                new (1, 2, 2),
+                new (5, 1, 2)
             };
 
             var pilotMethod = Container.Resolve<ISolver>();

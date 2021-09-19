@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using TspLib.Extensions;
 
-namespace TspLib.FiloIO
+namespace TspLib.FileIO
 {
     public class Printer
     {
@@ -78,12 +78,10 @@ namespace TspLib.FiloIO
             using (var logWriter = new StreamWriter(file))
             {
                 logWriter.Write(builder);
-            };
+            }
         }
 
-        private static void WriteSVGLine(Point a, Point b, StringBuilder builder, double xTransform, double yTransform)
-        {
-            builder.AppendLine("<line x1=\"" + (int)(a.X + xTransform) + "\" y1=\"" + (int)(a.Y + yTransform) + "\" x2=\"" + (int)(b.X + xTransform) + "\" y2=\"" + (int)(b.Y + yTransform) + "\" style=\"stroke:rgb(255,0,0);stroke-width:5\"/>");
-        }
+        private static void WriteSVGLine(Point a, Point b, StringBuilder builder, double xTransform, double yTransform) 
+            => builder.AppendLine("<line x1=\"" + (int)(a.X + xTransform) + "\" y1=\"" + (int)(a.Y + yTransform) + "\" x2=\"" + (int)(b.X + xTransform) + "\" y2=\"" + (int)(b.Y + yTransform) + "\" style=\"stroke:rgb(255,0,0);stroke-width:5\"/>");
     }
 }

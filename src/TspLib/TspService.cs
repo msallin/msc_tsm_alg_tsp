@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 using TspLib.Extensions;
-using TspLib.FiloIO;
+using TspLib.FileIO;
 using TspLib.Metaheuristics.Abstraction;
 
 namespace TspLib
@@ -15,10 +15,7 @@ namespace TspLib
 
         private readonly ISolver _solver;
 
-        public TspService(ISolver solver)
-        {
-            _solver = solver;
-        }
+        public TspService(ISolver solver) => _solver = solver;
 
         public void Run(string instanceName)
         {

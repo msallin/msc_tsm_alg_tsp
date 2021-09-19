@@ -1,6 +1,5 @@
 ﻿using TspLib;
 using TspLib.Metaheuristics;
-using TspLib.Metaheuristics.BeamSearch;
 using Xunit;
 
 namespace tests

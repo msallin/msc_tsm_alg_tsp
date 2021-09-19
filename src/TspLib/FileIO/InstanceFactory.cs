@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace TspLib.FiloIO
+namespace TspLib.FileIO
 { 
     public class InstanceFactory
     {
@@ -16,7 +16,7 @@ namespace TspLib.FiloIO
 
             var pointLines = lines
                 .Reverse()
-                .Take(lines.Count() - 2)
+                .Take(lines.Length - 2)
                 .Reverse();
 
             var points = new List<Point>();

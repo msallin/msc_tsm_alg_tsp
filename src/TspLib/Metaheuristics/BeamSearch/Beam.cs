@@ -16,7 +16,7 @@ namespace TspLib.Metaheuristics.BeamSearch
             var tempPartialSolutions = Repeat(tails, points, beamDepth);
             var ordered = tempPartialSolutions
                 .OrderBy(ps => ps.ClosedDistance)
-                .Take(SolutionSet.BeamWith);
+                .Take(SolutionSet.BeamWidth);
 
             solution.Attach(ordered.ToArray());
             return solution;

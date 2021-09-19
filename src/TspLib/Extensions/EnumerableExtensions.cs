@@ -6,13 +6,8 @@ namespace TspLib.Extensions
 {
     public static class EnumerableExtensions
     {
-        public static IEnumerable<T> WithoutFirst<T>(this IEnumerable<T> input)
-        {
-            return input
-                .Reverse()
-                .Take(input.Count() - 1)
-                .Reverse();
-        }
+        public static IEnumerable<T> WithoutFirst<T>(this IEnumerable<T> input) =>
+            input.Reverse().Take(input.Count() - 1).Reverse();
 
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source) => source.Shuffle(new Random());
 

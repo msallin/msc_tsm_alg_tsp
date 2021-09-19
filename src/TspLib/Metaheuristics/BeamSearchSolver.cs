@@ -34,8 +34,8 @@ namespace TspLib.Metaheuristics
 
         private static SolutionSet CreateFirstSolutionSet(Point[] points)
         {
-            var partialSolutions = new PartialSolution[SolutionSet.BeamWith];
-            for (var i = 0; i < SolutionSet.BeamWith; i++)
+            var partialSolutions = new PartialSolution[SolutionSet.BeamWidth];
+            for (var i = 0; i < SolutionSet.BeamWidth; i++)
             {
                 partialSolutions[i] = new PartialSolution(points[i]);
             }

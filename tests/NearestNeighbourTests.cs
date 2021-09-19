@@ -17,11 +17,11 @@ namespace tests
             var first = new Point(2, 0, 2.5);
             var points = new List<Point>
             {
-                new Point(4, 0, 1.5),
-                new Point(3, 0, 0.5),
-                new Point(1, 0.5, 2),
-                new Point(5, 0.5, 1),
-                new Point(6, 0.5, 0)
+                new (4, 0, 1.5),
+                new (3, 0, 0.5),
+                new (1, 0.5, 2),
+                new (5, 0.5, 1),
+                new (6, 0.5, 0)
             };
 
             var nearestNeighbour = Container.Resolve<IPathFinder>();
@@ -36,8 +36,8 @@ namespace tests
             var first = new Point(2, 0, 2.5);
             var points = new List<Point>
             {
-                new Point(1, 0.5, 2),
-                new Point(4, 0, 1.5)
+                new (1, 0.5, 2),
+                new (4, 0, 1.5)
             };
 
             var nearestNeighbour = Container.Resolve<IPathFinder>();
@@ -52,7 +52,7 @@ namespace tests
             var first = new Point(2, 0, 2.5);
             var points = new List<Point>
             {
-                new Point(1, 0.5, 2)
+                new (1, 0.5, 2)
             };
 
             var nearestNeighbour = Container.Resolve<IPathFinder>();

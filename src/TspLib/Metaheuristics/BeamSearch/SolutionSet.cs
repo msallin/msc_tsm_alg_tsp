@@ -4,11 +4,11 @@ namespace TspLib.Metaheuristics.BeamSearch
 {
     public class SolutionSet
     {
-        public static int BeamWith = 11;
+        public static int BeamWidth = 11;
 
         public SolutionSet(PartialSolution[] ordered)
         {
-            PartialSolutionList = new PartialSolution[BeamWith];
+            PartialSolutionList = new PartialSolution[BeamWidth];
             Set(ordered);
         }
 
@@ -16,7 +16,12 @@ namespace TspLib.Metaheuristics.BeamSearch
 
         internal void Set(PartialSolution[] partialSolutions)
         {
-            for (var i = 0; i < BeamWith; i++)
+            int width = BeamWidth;
+            if (partialSolutions.Length < BeamWidth)
+            {
+                width = partialSolutions.Length;
+            }
+            for (var i = 0; i < width; i++)
             {
                 PartialSolutionList[i] = partialSolutions[i];
             }
@@ -24,7 +29,7 @@ namespace TspLib.Metaheuristics.BeamSearch
 
         internal void Attach(PartialSolutionTail[] tails)
         {
-            for (var i = 0; i < tails.Count(); i++)
+            for (var i = 0; i < tails.Length; i++)
             {
                 var tail = tails[i];
                 PartialSolutionList[i] = new PartialSolution(tail.Head, tail, i);

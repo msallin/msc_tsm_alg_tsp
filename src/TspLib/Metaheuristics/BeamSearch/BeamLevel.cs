@@ -22,7 +22,7 @@
             public DistanceAndPointId(Point point, double distance)
             {
                 Point = point;
-                this.Distance = distance;
+                Distance = distance;
             }
         }
 

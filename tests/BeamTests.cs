@@ -21,13 +21,13 @@ namespace tests
             nextPoints[1] = new Point(4, 0, 2);
             nextPoints[2] = new Point(5, 5, 0);
 
-            var paritalSolutions = new List<PartialSolution>
+            var partialSolutions = new List<PartialSolution>
             {
-                new PartialSolution(startPoint),
-                new PartialSolution(startPointTwo)
+                new(startPoint),
+                new(startPointTwo)
             };
 
-            var solution = beam.GetNextSolutionSet(new SolutionSet(paritalSolutions.ToArray(), 5), nextPoints, 1);
+            var solution = beam.GetNextSolutionSet(new SolutionSet(partialSolutions.ToArray()), nextPoints, 1);
 
             Assert.Equal(nextPoints[3], solution.PartialSolutionList[0].Points[1]);
             Assert.Equal(nextPoints[3], solution.PartialSolutionList[1].Points[1]);
